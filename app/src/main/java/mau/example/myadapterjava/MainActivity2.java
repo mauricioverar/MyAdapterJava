@@ -1,7 +1,7 @@
 package mau.example.myadapterjava;
 
 import android.os.Bundle;
-import android.widget.ImageView;
+//import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,31 +11,25 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.AbstractCollection;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity2 extends AppCompatActivity {
     // lista de items
-    ArrayList <Person> personArrayList;
+    ArrayList<Person> personArrayList;
     RecyclerView recyclerView;
 
-    private ImageView imageView;
+//    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_main2);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        imageView = findViewById(R.id.iv_img);
-        imageView.setImageResource(R.drawable.ic_launcher_background);
 
         recyclerView = findViewById(R.id.rv_id);
 
